@@ -1,5 +1,8 @@
+const { Game } = require("phaser");
+
 document.addEventListener("DOMContentLoaded", () => {
 let canvas;
+let player;
 
 var config = {
     type: Phaser.AUTO,
