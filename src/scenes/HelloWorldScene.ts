@@ -56,7 +56,7 @@ export default class HelloWorldScene extends Phaser.Scene
     update(time: number, delta: number): void {
         console.log(player.body.checkCollision.down)
 
-        let speed = 16;
+        let speed = 100;
 
         //right
         if (arrowKey?.right.isDown) {
