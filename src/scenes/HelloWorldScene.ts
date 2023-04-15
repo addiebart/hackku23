@@ -44,6 +44,8 @@ export default class HelloWorldScene extends Phaser.Scene
     }
 
     update(time: number, delta: number): void {
+        console.log(player.body.checkCollision.down)
+
         let speed = 16;
 
         //right
@@ -65,8 +67,8 @@ export default class HelloWorldScene extends Phaser.Scene
         }
 
         //jump
-        if (Phaser.Input.Keyboard.JustDown(arrowKey?.up) || Phaser.Input.Keyboard.JustDown(space)) {
-            player.body.velocity.y = 300;
+        if ((Phaser.Input.Keyboard.JustDown(arrowKey?.up) || Phaser.Input.Keyboard.JustDown(space)) && player.body.checkCollision.down) {
+            player.body.velocity.y = -300;
         }
     }
 }
