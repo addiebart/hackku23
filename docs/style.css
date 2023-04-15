@@ -20,7 +20,7 @@ h1, h2{
 
 .authors{
     color: #fff;
-    background-color: rgba(25, 25, 112, 0.75); 
+    /*background-color: rgba(25, 25, 112, 0.75);*/
     max-width: fit-content;
     border: 0px;
     border-radius: 2px;
@@ -28,7 +28,7 @@ h1, h2{
 
 .gameinfo{
     color: #fff;
-    background-color: rgba(25, 25, 112, 0.75); 
+    /*background-color: rgba(25, 25, 112, 0.75); */
     max-width: fit-content;
     border: 0px;
     border-radius: 2px;
@@ -43,12 +43,6 @@ button{
 }
 
 .buttons-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     width: fit-content;
-    /*height: 300px;*/
-}
-
-.button-and-content{
-    width: fit-content;
+    margin: auto;
 }
