@@ -4,8 +4,10 @@
   "description": "A platformer",
   "main": "main.js",
   "scripts": {
+    "start": "parcel src/index.html -p 8000",
+    "build": "parcel build src/index.html --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
   "repository": {
     "type": "git",
