@@ -1,12 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Main page
-</body>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300&display=swap" rel="stylesheet">
+        <style>
+            * {
+                font-family: Anuphan, sans-serif;
+            }
+
+            html {
+                background-color: indigo;
+            }
+
+            h1, h2{
+                text-align: center;
+                color: #fff;
+            }
+
+            .game-placeholder {
+                height: 400px;
+                width: 600px;
+                background-color:fuchsia;
+                margin: auto;
+            }
+
+            .authors{
+                color: #fff;
+                max-width: fit-content;
+                border: 0px;
+                border-radius: 2px;
+            }
+
+            .gameinfo{
+                color: #fff;
+                max-width: fit-content;
+                border: 0px;
+                border-radius: 2px;
+            }
+
+            button{
+                background-color: indigo;
+                color: #fff;
+                font-family: Anuphan, sans-serif;
+                border: 2px solid white;
+                border-radius: 2px;
+            }
+        </style>
+        <script>
+            function authors(){
+                if (document.getElementById("authorsbutton").value == "off") {
+                    document.getElementById("authors").innerHTML = "Addie Anya Hunter Tommy <br> Made for HackKU 2023"
+                    document.getElementById("authors").style.border = "2px solid white"
+                    document.getElementById("authorsbutton").value = "on"
+                } else {
+                    document.getElementById("authors").innerHTML = ""
+                    document.getElementById("authors").style.border = "0px"
+                    document.getElementById("authorsbutton").value = "off"
+                }
+            }
+
+            function gameinfo(){
+                if (document.getElementById("gamebutton").value == "off") {
+                    document.getElementById("gameinfo").innerHTML = "Enjoy a fun time in space with spaceman!"
+                    document.getElementById("gameinfo").style.border = "2px solid white"
+                    document.getElementById("gamebutton").value == "on"
+                } else {
+                    document.getElementById("gameinfo").innerHTML = ""
+                    document.getElementById("gameinfo").style.border = "0px"
+                    document.getElementById("gamebutton").value = "off"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Cool epic fun game!</h1>
+        <div class="buttons-container">
+            <button id="gamebutton" onclick="gameinfo()" value="off">About the game</button>
+            <button id="authorsbutton" onclick="authors()" value="off">About us</button>
+            <div id="authors" class="authors"></div>
+            <div id="gameinfo" class="gameinfo"></div>
+        </div>
+        <div class="game-placeholder">
+            <h1>GAME GOES HERE</h1>
+        </div>
+    </body>
 </html>
