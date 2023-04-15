@@ -78,7 +78,7 @@ export default class HelloWorldScene extends Phaser.Scene
         }
 
         if (player.body.velocity.y == 0) {
-            player.body.setMaxVelocityY(1000000);
+            player.body.setMaxVelocityY(100000);
         }
 
         //jump
