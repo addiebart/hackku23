@@ -1,0 +1,28 @@
+{
+  "name": "hackku23",
+  "version": "1.0.0",
+  "description": "A platformer",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/addiebart/hackku23.git"
+  },
+  "keywords": [
+    "hackathon",
+    "hackku",
+    "platformer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/addiebart/hackku23/issues"
+  },
+  "homepage": "https://github.com/addiebart/hackku23#readme",
+  "devDependencies": {
+    "electron": "^24.1.2"
+  }
+}
