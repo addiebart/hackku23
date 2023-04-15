@@ -13,8 +13,9 @@ export default class HelloWorldScene extends Phaser.Scene
     {
         canvas = document.querySelectorAll("canvas")[0];
         canvas.className = "main";
-        this.load.image('background', './assets/brickwall.jpg');
-        this.load.spritesheet("player", "./assets/player.png", {
+        this.load.setBaseURL("./../play/assets")
+        this.load.image('background', 'brickwall.jpg');
+        this.load.spritesheet("player", "player.png", {
             frameWidth: 16,
             frameHeight: 16
         })
