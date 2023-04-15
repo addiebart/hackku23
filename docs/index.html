@@ -4,59 +4,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300&display=swap" rel="stylesheet">
-        <style>
-            * {
-                font-family: Anuphan, sans-serif;
-            }
-
-            html {
-                background-color: indigo;
-            }
-
-            h1, h2{
-                text-align: center;
-                color: #fff;
-            }
-
-            .game-placeholder {
-                height: 400px;
-                width: 600px;
-                background-color:fuchsia;
-                margin: auto;
-            }
-
-            .authors{
-                color: #fff;
-                max-width: fit-content;
-                border: 0px;
-                border-radius: 2px;
-            }
-
-            .gameinfo{
-                color: #fff;
-                max-width: fit-content;
-                border: 0px;
-                border-radius: 2px;
-            }
-
-            button{
-                background-color: indigo;
-                color: #fff;
-                font-family: Anuphan, sans-serif;
-                border: 2px solid white;
-                border-radius: 2px;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
         <script>
             function authors(){
                 if (document.getElementById("authorsbutton").value == "off") {
                     document.getElementById("authors").innerHTML = "Addie Anya Hunter Tommy <br> Made for HackKU 2023"
                     document.getElementById("authors").style.border = "2px solid white"
                     document.getElementById("authorsbutton").value = "on"
+                    document.getElementById("authorsbutton").innerHTML = "About Us ▲"
                 } else {
                     document.getElementById("authors").innerHTML = ""
                     document.getElementById("authors").style.border = "0px"
                     document.getElementById("authorsbutton").value = "off"
+                    document.getElementById("authorsbutton").innerHTML = "About Us ▼"
                 }
             }
 
@@ -76,10 +36,14 @@
     <body>
         <h1>Cool epic fun game!</h1>
         <div class="buttons-container">
-            <button id="gamebutton" onclick="gameinfo()" value="off">About the game</button>
-            <button id="authorsbutton" onclick="authors()" value="off">About us</button>
-            <div id="authors" class="authors"></div>
-            <div id="gameinfo" class="gameinfo"></div>
+            <div class="button-and-content">
+                <button id="gamebutton" onclick="gameinfo()" value="off">About the game</button>
+                <div id="gameinfo" class="gameinfo"></div>
+            </div>
+            <div class="button-and-content">
+                <button id="authorsbutton" onclick="authors()" value="off">About Us ▼</button>
+                <div id="authors" class="authors"></div>
+            </div>
         </div>
         <div class="game-placeholder">
             <h1>GAME GOES HERE</h1>
