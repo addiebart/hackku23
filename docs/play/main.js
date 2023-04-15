@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", () => {
+let canvas;
+
 var config = {
     type: Phaser.AUTO,
     width: 240,
@@ -13,6 +16,8 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
+    canvas = document.querySelectorAll("canvas")[0];
+    canvas.className = "main";
 }
 
 function create ()
@@ -23,7 +28,4 @@ function update ()
 {
 }
 
-var canvas = document.querySelector("canvas");
-var ctx = canvas.getContext("2d");
-ctx.fillStyle = "blue";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+});
