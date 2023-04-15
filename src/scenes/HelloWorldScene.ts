@@ -46,10 +46,11 @@ export default class HelloWorldScene extends Phaser.Scene
         player.setOrigin(.5, 0);
         player.body.collideWorldBounds = true;
 
-        let groundTiles : Phaser.Tilemaps.Tileset = map.addTilesetImage("ground", undefined, 16, 16);
-
-        let groundLayer = map.createLayer("groundLayer", groundTiles, 0, 0);
-        groundLayer?.setCollisionByExclusion([-1]);
+        let platforms = this.physics.add.staticGroup();
+        platforms.setOrigin(0,0);
+        for (let i = 0; i < 255; i++) {
+            platforms.create(8+16*i, 96-8, 'ground')
+        }
 
     }
 
