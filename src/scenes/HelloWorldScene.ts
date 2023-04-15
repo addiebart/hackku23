@@ -48,7 +48,7 @@ export default class HelloWorldScene extends Phaser.Scene
 
         let groundTiles : Phaser.Tilemaps.Tileset = map.addTilesetImage("ground", undefined, 16, 16);
 
-        let groundLayer = map.createLayer("groundLayer", groundTiles);
+        let groundLayer = map.createLayer("groundLayer", groundTiles, 0, 0);
         groundLayer?.setCollisionByExclusion([-1]);
 
     }
