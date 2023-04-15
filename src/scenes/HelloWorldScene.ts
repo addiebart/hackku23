@@ -24,7 +24,7 @@ export default class HelloWorldScene extends Phaser.Scene
     create()
     {
         let bg = this.add.image(0, 0, "background");
-        bg.scale = .6;
+        bg.scale = .25;
         bg.setOrigin(0, 0);
         let player = this.add.sprite(1*16, 5*16, "player");
         player.setOrigin(.5, 0);
