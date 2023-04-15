@@ -12,12 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
             update: update
         }
     };
-    /** @this Phaser.Game */
+    /** @this game */
     var game = new Phaser.Game(config);
     function preload() {
         canvas = document.querySelectorAll("canvas")[0];
         canvas.className = "main";
         this.load.image('background', './assets/brickwall.jpg');
+        
     }
     function create() {
         //game.world.setBounds(0, 0, 5000, 240);
