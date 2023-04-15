@@ -5,6 +5,7 @@ let arrowKey : Phaser.Types.Input.Keyboard.CursorKeys | undefined;
 let space : Phaser.Input.Keyboard.Key | undefined;
 let player : Phaser.Types.Physics.Arcade.SpriteWithDynamicBody;
 let justJumped : boolean;
+let map : Phaser.Tilemaps.Tilemap;
 
 export default class HelloWorldScene extends Phaser.Scene
 {
@@ -19,6 +20,7 @@ export default class HelloWorldScene extends Phaser.Scene
         canvas.className = "main";
         this.load.setBaseURL("./../play/assets")
         this.load.image('background', 'brickwall.jpg');
+        this.load.image('ground', 'woodplank.jpg');
         this.load.spritesheet("player", "player.png", {
             frameWidth: 16,
             frameHeight: 16
@@ -30,6 +32,9 @@ export default class HelloWorldScene extends Phaser.Scene
         //enable physics
         this.physics.resume()
 
+        //make map
+        map = this.make.tilemap({key: 'map'});
+
         //controls
         arrowKey = this.input.keyboard?.createCursorKeys();
         space = this.input.keyboard?.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
@@ -40,6 +45,11 @@ export default class HelloWorldScene extends Phaser.Scene
         player = this.physics.add.sprite(1*16, 5*16, "player");
         player.setOrigin(.5, 0);
         player.body.collideWorldBounds = true;
+
+        let groundTiles : Phaser.Tilemaps.Tileset = map.addTilesetImage("ground", undefined, 16, 16);
+
+        let groundLayer = map.createLayer("groundLayer", groundTiles);
+        groundLayer?.setCollisionByExclusion([-1]);
 
     }
 
