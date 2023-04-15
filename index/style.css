@@ -20,18 +20,18 @@ h1, h2{
 
 .authors{
     color: #fff;
-    /*background-color: rgba(25, 25, 112, 0.75);*/
+    background-color: rgba(0, 0, 0, 0.6);
     max-width: fit-content;
     border: 0px;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .gameinfo{
     color: #fff;
-    /*background-color: rgba(25, 25, 112, 0.75); */
+    background-color: rgba(0, 0, 0, 0.6);
     max-width: fit-content;
     border: 0px;
-    border-radius: 2px;
+    border-radius: 3    px;
 }
 
 button{
@@ -39,7 +39,7 @@ button{
     color: #fff;
     font-family: Anuphan, sans-serif;
     border: 2px solid white;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 .buttons-container{
