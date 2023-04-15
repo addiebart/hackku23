@@ -77,6 +77,10 @@ export default class HelloWorldScene extends Phaser.Scene
             player.body.velocity.y -= .0001;
         }
 
+        if (player.body.velocity.y == 0) {
+            player.body.setMaxVelocityY(1000000);
+        }
+
         //jump
         if ((Phaser.Input.Keyboard.JustDown(arrowKey?.up) || Phaser.Input.Keyboard.JustDown(space)) && player.body.checkCollision.down) {
             player.body.velocity.y = -300;
